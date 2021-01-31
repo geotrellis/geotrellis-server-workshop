@@ -4,7 +4,6 @@ import de.heikoseeberger.sbtheader._
 name := "geotrellis-server-stac-workshop"
 version := "0.1.0-SNAPSHOT"
 scalaVersion := "2.12.12"
-crossScalaVersions := Seq("2.12.12", "2.11.12")
 organization := "geotrellis"
 scalacOptions ++= Seq(
   "-deprecation",
@@ -85,6 +84,7 @@ libraryDependencies ++= Seq(
   scaffeine,
   decline,
   stac4s,
+  ansiColors212 % Provided,
   scalatest % Test
 )
 
@@ -94,8 +94,3 @@ excludeDependencies ++= Seq(
   ExclusionRule("org.slf4j", "slf4j-log4j12"),
   ExclusionRule("org.slf4j", "slf4j-nop")
 )
-
-libraryDependencies += (CrossVersion.partialVersion(scalaVersion.value) match {
-  case Some((2, scalaMajor)) if scalaMajor >= 12 => ansiColors212 % Provided
-  case Some((2, scalaMajor)) if scalaMajor >= 11 => ansiColors211 % Provided
-})

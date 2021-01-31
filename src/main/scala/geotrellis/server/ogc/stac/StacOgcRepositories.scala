@@ -33,7 +33,7 @@ import cats.syntax.option._
 import cats.syntax.semigroup._
 import cats.effect.Sync
 import cats.instances.list._
-import higherkindness.droste.{Algebra, scheme}
+import higherkindness.droste.{scheme, Algebra}
 import org.http4s.Uri
 import org.http4s.client.Client
 import io.chrisdavenport.log4cats.Logger
@@ -67,8 +67,7 @@ case class StacOgcRepository[F[_]: Sync: Logger](
           val source: Option[RasterSource] = rasterSources match {
             case head :: Nil => head.some
             case head :: _   =>
-              /**
-                * By default STAC API returns all temporal items even though the time is not specified.
+              /** By default STAC API returns all temporal items even though the time is not specified.
                 * If defaultTime configuration is set to true and the query is not temporal and not universal
                 * (meaning that it is bounded by temporal or spatial extent),
                 * we can select the first time position of the temporal layer in this case.
@@ -106,8 +105,7 @@ case class StacOgcRepositories[F[_]: Sync: Logger](
 ) extends RepositoryM[F, List, OgcSource] {
   def store: F[List[OgcSource]] = find(query.withNames(stacLayers.map(_.name).toSet))
 
-  /**
-    * At first, choose stacLayers that fit the query, because after that we'll erase their name.
+  /** At first, choose stacLayers that fit the query, because after that we'll erase their name.
     * GT Server layer conf names != the STAC Layer name
     * conf names can be different for the same STAC Layer name.
     * A name is unique per the STAC layer and an asset.

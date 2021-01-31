@@ -21,7 +21,7 @@ import geotrellis.raster.geotiff.GeoTiffPath
 
 package object stac {
   implicit class StacItemAssetOps(val self: StacItemAsset) extends AnyVal {
-    def hrefGDAL(withGDAL: Boolean): String = if (withGDAL) s"gdal+${self.href}" else s"${GeoTiffPath.PREFIX}${self.href}"
+    def hrefGDAL(withGDAL: Boolean): String        = if (withGDAL) s"gdal+${self.href}" else s"${GeoTiffPath.PREFIX}${self.href}"
     def withGDAL(withGDAL: Boolean): StacItemAsset = self.copy(href = hrefGDAL(withGDAL))
   }
 }
