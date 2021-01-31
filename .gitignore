@@ -23,3 +23,4 @@ pc.stdout.log
 metals.sbt
 .history
 .vscode
+.bsp

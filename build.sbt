@@ -2,7 +2,7 @@ import Dependencies._
 import de.heikoseeberger.sbtheader._
 
 name := "geotrellis-server-stac-workshop"
-version := "0.2.0-SNAPSHOT"
+version := "0.1.0-SNAPSHOT"
 scalaVersion := "2.12.12"
 crossScalaVersions := Seq("2.12.12", "2.11.12")
 organization := "geotrellis"

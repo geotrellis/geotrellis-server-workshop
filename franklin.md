@@ -8,8 +8,8 @@ Check [Docker docs](https://docs.docker.com/docker-for-mac/networking/) for more
 1. Run DB migrations
 
 ```bash
-docker run \
-  --rm -it quay.io/azavea/franklin:latest \
+docker run --rm \
+  quay.io/azavea/franklin:latest \
   migrate \
   --db-user franklin \
   --db-name franklin \
@@ -20,7 +20,7 @@ docker run \
 2. Import STAC Catalog
 
 ```bash
-docker run \
+docker run --rm \
   -v ~/.aws:/var/lib/franklin/.aws \
   quay.io/azavea/franklin:latest \
   import-catalog \
@@ -34,7 +34,7 @@ docker run \
 3. Run Franklin instance
 
 ```bash
-docker run \
+docker run --rm \
   -p 9090:9090 \
   quay.io/azavea/franklin:latest \
   serve \
