@@ -18,7 +18,7 @@ object Dependencies {
   val concHashMap         = "com.googlecode.concurrentlinkedhashmap" % "concurrentlinkedhashmap-lru" % "1.4.2"
   val geotrellisS3        = "org.locationtech.geotrellis"           %% "geotrellis-s3"               % "3.5.2"
   val geotrellisGdal      = "org.locationtech.geotrellis"           %% "geotrellis-gdal"             % "3.5.2"
-  val geotrellisServerOgc = "com.azavea.geotrellis"                 %% "geotrellis-server-ogc"       % "4.2.0-18-ge2d9972-SNAPSHOT"
+  val geotrellisServerOgc = "com.azavea.geotrellis"                 %% "geotrellis-server-ogc"       % "4.2.0-20-g920fadc-SNAPSHOT"
 
   val decline           = "com.monovore" %% "decline" % "1.0.0"
   val http4sBlazeClient = http4sVer("blaze-client")
