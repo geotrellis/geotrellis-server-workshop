@@ -16,8 +16,8 @@ object Dependencies {
   val catsEffect          = catsVersion("effect")
   val scaffeine           = "com.github.blemale"                    %% "scaffeine"                   % "2.6.0"
   val concHashMap         = "com.googlecode.concurrentlinkedhashmap" % "concurrentlinkedhashmap-lru" % "1.4.2"
-  val geotrellisS3        = "org.locationtech.geotrellis"           %% "geotrellis-s3"               % "3.5.2-SNAPSHOT"
-  val geotrellisGdal      = "org.locationtech.geotrellis"           %% "geotrellis-gdal"             % "3.5.2-SNAPSHOT"
+  val geotrellisS3        = "org.locationtech.geotrellis"           %% "geotrellis-s3"               % "3.5.2"
+  val geotrellisGdal      = "org.locationtech.geotrellis"           %% "geotrellis-gdal"             % "3.5.2"
   val geotrellisServerOgc = "com.azavea.geotrellis"                 %% "geotrellis-server-ogc"       % "4.2.0-18-ge2d9972-SNAPSHOT"
 
   val decline           = "com.monovore" %% "decline" % "1.0.0"
